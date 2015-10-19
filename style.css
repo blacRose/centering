@@ -1,12 +1,17 @@
 /* line 1, sass/style.scss */
+.th {
+  height: 600px;
+}
+
+/* line 5, sass/style.scss */
 .block {
   text-align: center;
   background: #c0c0c0;
   border: #a0a0a0 solid 1px;
   margin: 20px auto;
-  max-width: 320px;
+  max-width: 400px;
 }
-/* line 7, sass/style.scss */
+/* line 11, sass/style.scss */
 .block:before {
   content: '';
   display: inline-block;
@@ -15,26 +20,36 @@
   margin-right: -0.25em;
   background: #808080;
 }
-@media screen and (max-width: 140px) {
-  /* line 7, sass/style.scss */
+@media screen and (max-width: 150px) {
+  /* line 5, sass/style.scss */
+  .block {
+    height: auto;
+    margin: 0;
+  }
+  /* line 22, sass/style.scss */
   .block:before {
     display: none;
   }
 }
+@media screen and (max-width: 200px) {
+  /* line 5, sass/style.scss */
+  .block {
+    font-size: 0.8em;
+  }
+}
 
-/* line 20, sass/style.scss */
+/* line 31, sass/style.scss */
 .centered {
   display: inline-block;
   vertical-align: middle;
   width: calc(100% - 100px);
-  max-width: 300px;
-  min-width: 109px;
   padding: 10px 15px;
   border: #a0a0a0 solid 1px;
   background: #f5f5f5;
 }
-
-/* line 31, sass/style.scss */
-.th {
-  height: 600px;
+@media screen and (max-width: 150px) {
+  /* line 31, sass/style.scss */
+  .centered {
+    width: calc(100% - 32px);
+  }
 }
